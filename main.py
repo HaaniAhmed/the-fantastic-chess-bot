@@ -53,21 +53,6 @@ pieceSquareTables = {'P': np.array([[0.,   0.,   0.,   0.,   0.,   0.,   0.,   0
                                    [-30., -40., -40., -50., -50., -40., -40., -30.],
                                    [-30., -40., -40., -50., -50., -40., -40., -30.]])}
 
-#def evaluationFunction(board):
-    evalSum = 0
-    pieces = board.piece_map()
-    for index in pieces:
-        file = chess.square_file(index)
-        rank = chess.square_rank(index)
-        currentPiece = str(pieces[index])
-        table = pieceSquareTables[currentPiece.upper()]
-        if currentPiece.isupper():
-            flippedTable = np.flip(table, axis=0)
-            evalSum += pieceVals[currentPiece] + flippedTable[rank, file]
-        else:
-            evalSum += pieceVals[currentPiece] - table[rank, file]
-    return evalSum
-
 def evaluationFunction(board):
  evalSum = 0
  if board.is_checkmate():
