@@ -1,4 +1,4 @@
 # the-fantastic-chess-bot
 
 
-A chess AI built using the minimax algorithm with alpha-beta pruning. I plan on experimenting further by incorporating move ordering and iterative deepening into the program, and finally hooking this AI to the API of an online chess website such as Lichess.
+A chess AI built in Python using the minimax algorithm with alpha-beta pruning, move-ordering and piece-square tables. Also registered on Lichess, feel free to connect if you would like to play against it! 
